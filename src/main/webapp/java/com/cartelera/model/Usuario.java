@@ -24,14 +24,6 @@ public class Usuario {
     @JoinColumn(name = "ID_DIRECCION")
     private Perfil perfil;
 
-    @OneToMany(cascade = {CascadeType.ALL})
-    @JoinColumn(name = "ID_PUBLICACION")
-    private List<Publicacion> publicaciones;
-
-    @OneToMany(cascade = {CascadeType.ALL})
-    @JoinColumn(name = "ID_COMENTARIO")
-    private List<Comentario> comentarios;
-
 
     public String getEmail() {
         return email;
@@ -62,5 +54,14 @@ public class Usuario {
     }
 
     public void setPerfil(Perfil perfil) { this.perfil = perfil; }
+
+    public Usuario(){}
+
+    public Usuario(String email, String password, String nombreCompleto, Perfil perfil){
+        this.email = email;
+        this.password = password;
+        this.nombreCompleto = nombreCompleto;
+        this.perfil = perfil;
+    }
 
 }
