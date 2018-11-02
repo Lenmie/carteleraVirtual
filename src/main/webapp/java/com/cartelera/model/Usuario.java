@@ -1,34 +1,37 @@
 package com.cartelera.model;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table
 public class Usuario {
 
     @Id @GeneratedValue
-    @Column
+    @Column(name = "USUARIO_ID")
     private Long id;
 
-    @Column
+    @Column(name = "EMAIL")
     private String email;
 
-    @Column
+    @Column(name = "PASSWORD")
     private String password;
 
-    @Column
+    @Column(name = "NOMBRE")
     private String nombreCompleto;
 
-    @OneToOne
+    @OneToOne(cascade = {CascadeType.ALL})
     @JoinColumn(name = "ID_DIRECCION")
     private Perfil perfil;
 
-    //@Column
-    //private Perfil perfil;
+    @OneToMany(cascade = {CascadeType.ALL})
+    @JoinColumn(name = "ID_PUBLICACION")
+    private List<Publicacion> publicaciones;
 
-    public Long getId() { return id; }
+    @OneToMany(cascade = {CascadeType.ALL})
+    @JoinColumn(name = "ID_COMENTARIO")
+    private List<Comentario> comentarios;
 
-    public void setId(Long id) { this.id = id; }
 
     public String getEmail() {
         return email;
@@ -53,14 +56,11 @@ public class Usuario {
     public void setNombreCompleto(String nombreCompleto) {
         this.nombreCompleto = nombreCompleto;
     }
-/*
+
     public Perfil getPerfil() {
         return perfil;
     }
 
-    public void setPerfil(Perfil perfil) {
-        this.perfil = perfil;
-    }
+    public void setPerfil(Perfil perfil) { this.perfil = perfil; }
 
-*/
 }

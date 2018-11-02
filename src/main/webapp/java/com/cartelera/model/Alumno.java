@@ -5,23 +5,11 @@ import java.util.List;
 
 @Entity
 @Table
-public class Alumno{
+public class Alumno extends Perfil{
 
-    @Id @GeneratedValue
-    @Column
-    private Long id;
-
-    @OneToMany
+    @OneToMany(mappedBy = "alumno")
     private List<Cartelera> cartelerasSelectas;
 
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
 
     public void registrarInteres(Cartelera unaCartelera){
 
@@ -29,8 +17,15 @@ public class Alumno{
     public void comentar(Cartelera unaCartelera,String texto){
 
     }
-
     public Alumno(List<Cartelera> cartelerasSelectas) {
+        this.cartelerasSelectas = cartelerasSelectas;
+    }
+
+    public List<Cartelera> getCartelerasSelectas() {
+        return cartelerasSelectas;
+    }
+
+    public void setCartelerasSelectas(List<Cartelera> cartelerasSelectas) {
         this.cartelerasSelectas = cartelerasSelectas;
     }
 }

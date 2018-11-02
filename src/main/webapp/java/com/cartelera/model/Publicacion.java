@@ -2,6 +2,7 @@ package com.cartelera.model;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Table
@@ -20,7 +21,7 @@ public class Publicacion {
     @Column
     private String texto;
 
-    @OneToMany(optional = true) /* una publicacion tiene 0..* comentarios */
+    @OneToMany(mappedBy = "") /* una publicacion tiene 0..* comentarios */
     private List<Comentario> comentarios;
 
     public Long getId() { return id; }
