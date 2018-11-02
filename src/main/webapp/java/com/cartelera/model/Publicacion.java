@@ -9,19 +9,19 @@ import java.util.List;
 public class Publicacion {
 
     @Id @GeneratedValue
-    @Column
+    @Column(name = "PUBLICACION_ID")
     private Long id;
 
-    @Column
+    @Column(name = "FECHA_CREACION")
     private Date fechaCreacion;
 
-    @Column
+    @Column(name = "TITULO")
     private String titulo;
 
-    @Column
+    @Column(name = "TEXTO")
     private String texto;
 
-    @OneToMany(mappedBy = "") /* una publicacion tiene 0..* comentarios */
+    @OneToMany(mappedBy = "publicacion") /* una publicacion tiene 0..* comentarios */
     private List<Comentario> comentarios;
 
     public Long getId() { return id; }
@@ -52,7 +52,7 @@ public class Publicacion {
         this.texto = texto;
     }
 
-    public List<Comentario> getComentarios(){return this.comentarios}
+    public List<Comentario> getComentarios(){return this.comentarios;}
 
     public void addComentario(Comentario comment){
         this.comentarios.add(comment);
@@ -61,4 +61,6 @@ public class Publicacion {
     public void removeComentario(Comentario comment){
         this.comentarios.remove(comment);
     }
+
+
 }

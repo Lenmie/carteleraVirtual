@@ -8,9 +8,9 @@ import java.util.List;
 @Table
 public class Docente extends Perfil {
 
-    @Id @GeneratedValue
-    @Column
-    private Long id;
+    @OneToMany
+    private List<Cartelera> cartelerasHabilitadas;
+
 
     public void habilitarComentarios(){
 
