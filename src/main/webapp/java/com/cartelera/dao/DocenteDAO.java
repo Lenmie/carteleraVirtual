@@ -17,5 +17,5 @@ public class DocenteDAO extends GenericDAOHibernateJPA<Docente> {
         docente.getCartelerasHabilitadas().remove(cartelera);
         actualizar(docente);
     }
-    
+
 }
