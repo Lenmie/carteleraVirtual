@@ -34,28 +34,8 @@ public class Cartelera {
         return publicadores;
     }
 
-
     public List<Publicacion> getPublicaciones() {
         return publicaciones;
-    }
-
-
-
-    public void agregarPublicador(Perfil unPublicador){
-        this.publicadores.add((Publicador)unPublicador);
-
-    }
-
-    public void eliminarPublicador(Perfil unPublicador){
-        this.publicadores.remove(unPublicador);
-
-    }
-    public void agregarPublicacion(Publicacion unaPublicacion){
-        this.publicaciones.add(unaPublicacion);
-
-    }
-    public void eliminarPublicacion(Publicacion unaPublicacion){
-        this.publicaciones.remove(unaPublicacion);
     }
 
     public Long getId() { return id; }
@@ -88,14 +68,6 @@ public class Cartelera {
 
     public List<Alumno> getAlumnosInteresados() {
         return alumnosInteresados;
-    }
-
-    public void addAlumnoInteresado(Alumno alumno){
-        this.alumnosInteresados.add(alumno);
-    }
-
-    public void removeAlumnoInteresado(Alumno alumno){
-        this.alumnosInteresados.remove(alumno);
     }
 
     public Cartelera(String titulo, String descripcion, Date fechaCreacion, List<Alumno> alumnosInteresados) {

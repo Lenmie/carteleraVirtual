@@ -9,37 +9,37 @@ public class CarteleraDAO extends GenericDAOHibernateJPA<Cartelera>{
 
     public void insertarPublicacion(Publicacion publicacion, Long idCartelera){
         Cartelera cartelera = recuperar(idCartelera);
-        cartelera.agregarPublicacion(publicacion);
+        cartelera.getPublicaciones().add(publicacion);
         actualizar(cartelera);
     }
 
     public void eliminarPublicacion(Publicacion publicacion, Long idCartelera){
         Cartelera cartelera = recuperar(idCartelera);
-        cartelera.eliminarPublicacion(publicacion);
+        cartelera.getPublicaciones().remove(publicacion);
         actualizar(cartelera);
     }
 
     public void insertarPublicador(Publicador publicador, Long idCartelera){
         Cartelera cartelera = recuperar(idCartelera);
-        cartelera.agregarPublicador(publicador);
+        cartelera.getPublicadores().add(publicador);
         actualizar(cartelera);
     }
 
     public void eliminarPublicador(Publicador publicador, Long idCartelera){
         Cartelera cartelera = recuperar(idCartelera);
-        cartelera.eliminarPublicador(publicador);
+        cartelera.getPublicadores().remove(publicador);
         actualizar(cartelera);
     }
 
     public void insertarAlumnoInteresado(Alumno alumno, Long idCartelera){
         Cartelera cartelera = recuperar(idCartelera);
-        cartelera.addAlumnoInteresado(alumno);
+        cartelera.getAlumnosInteresados().add(alumno);
         actualizar(cartelera);
     }
 
     public void eliminarAlumnoInteresado(Alumno alumno, Long idCartelera){
         Cartelera cartelera = recuperar(idCartelera);
-        cartelera.removeAlumnoInteresado(alumno);
+        cartelera.getAlumnosInteresados().remove(alumno);
         actualizar(cartelera);
     }
 }
