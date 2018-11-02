@@ -1,29 +1,36 @@
 package com.cartelera.model;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table
-public class Alumno{
+public class Alumno extends Perfil{
 
-    @Id @GeneratedValue
-    @Column
-    private Long id;
+    @OneToMany(mappedBy = "alumno")
+    private List<Cartelera> cartelerasSelectas;
 
-    public Long getId() {
-        return id;
+    @Column(name="MEDIOS")
+    private List<String> mediosComunicacion;
+
+    public List<String> getMediosComunicacion() {
+        return mediosComunicacion;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setMediosComunicacion(List<String> mediosComunicacion) {
+        this.mediosComunicacion = mediosComunicacion;
     }
 
-    public void registrarInteres(Cartelera unaCartelera){
-
+    public Alumno(List<Cartelera> cartelerasSelectas) {
+        this.cartelerasSelectas = cartelerasSelectas;
     }
 
-    public void comentar(Cartelera unaCartelera,String texto){
-
+    public List<Cartelera> getCartelerasSelectas() {
+        return cartelerasSelectas;
     }
 
+    public Alumno(List<Cartelera> cartelerasSelectas, List<String> mediosComunicacion) {
+        this.cartelerasSelectas = cartelerasSelectas;
+        this.mediosComunicacion = mediosComunicacion;
+    }
 }

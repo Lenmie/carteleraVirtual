@@ -2,6 +2,7 @@ package com.cartelera.model;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Table
@@ -20,25 +21,21 @@ public class Cartelera {
     @Column
     private Date fechaCreacion;
 
-    public Cartelera(String titulo, String descripcion, Date fechaCreacion) {
-        this.titulo = titulo;
-        this.descripcion = descripcion;
-        this.fechaCreacion = fechaCreacion;
+    @OneToMany(mappedBy = "cartelera")
+    private List<Alumno> alumnosInteresados;
+
+    @OneToMany
+    private List<Publicacion> publicaciones;
+
+    @OneToMany
+    private List<Publicador> publicadores;
+
+    public List<Publicador> getPublicadores() {
+        return publicadores;
     }
 
-    public Cartelera nuevaConTituloYDescripcion(String titulo, String descripcion){
-
-        return null;
-    }
-
-    public void agregarPublicador(Perfil unPublicador){
-
-    }
-    public void agregarPublicacion(Publicacion unaPublicacion){
-
-    }
-    public void eliminarPublicacion(Publicacion unaPublicacion){
-
+    public List<Publicacion> getPublicaciones() {
+        return publicaciones;
     }
 
     public Long getId() { return id; }
@@ -68,4 +65,24 @@ public class Cartelera {
     public void setFechaCreacion(Date fechaCreacion) {
         this.fechaCreacion = fechaCreacion;
     }
+
+    public List<Alumno> getAlumnosInteresados() {
+        return alumnosInteresados;
+    }
+
+    public Cartelera(String titulo, String descripcion, Date fechaCreacion, List<Alumno> alumnosInteresados) {
+        this.titulo = titulo;
+        this.descripcion = descripcion;
+        this.fechaCreacion = fechaCreacion;
+        this.alumnosInteresados = alumnosInteresados;
+    }
+
+    public Cartelera(String titulo, String descripcion){
+        this.titulo = titulo;
+        this.descripcion = descripcion;
+    }
+
+    public Cartelera(){}
+
+
 }

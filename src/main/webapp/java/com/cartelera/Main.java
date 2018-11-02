@@ -1,18 +1,21 @@
 package com.cartelera;
 
-import com.cartelera.dao.CarteleraDAO;
-import com.cartelera.model.Cartelera;
-import sun.util.calendar.LocalGregorianCalendar;
 
-import java.util.Date;
+import com.cartelera.dao.UsuarioDAO;
+import com.cartelera.model.Administrador;
+import com.cartelera.model.Alumno;
+import com.cartelera.model.Perfil;
+import com.cartelera.model.Usuario;
 
 public class Main {
 
     public static void main(final String[] args) throws Exception {
-        Cartelera cartelera = new Cartelera("titulo1","una Descripcion",new Date());
-        CarteleraDAO dao = new CarteleraDAO();
-        dao.persistir(cartelera);
-        System.out.println("a");
-        System.out.println(dao.existe(cartelera.getId()));
+        Perfil admin = new Administrador();
+        Usuario usuario = new Usuario("enci.javier@yahoo.com","1234","javier surita",admin);
+
+        UsuarioDAO usuarioDAO = new UsuarioDAO();
+        usuarioDAO.persistir(usuario);
+
+
     }
 }

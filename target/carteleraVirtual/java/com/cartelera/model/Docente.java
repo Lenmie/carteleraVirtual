@@ -8,27 +8,20 @@ import java.util.List;
 @Table
 public class Docente extends Perfil {
 
-    @Id @GeneratedValue
-    @Column
-    private Long id;
+    @OneToMany
+    private List<Cartelera> cartelerasHabilitadas;
 
-    public void habilitarComentarios(){
+    public List<Cartelera> getCartelerasHabilitadas() {
+        return cartelerasHabilitadas;
+    }
 
+    public void setCartelerasHabilitadas(List<Cartelera> cartelerasHabilitadas) {
+        this.cartelerasHabilitadas = cartelerasHabilitadas;
     }
 
     public List<Alumno> getAlumnosInteresados(Cartelera unaCartelera){
         return new ArrayList<Alumno>();
     }
 
-    public void crearPublicacion(Cartelera unaCartelera, String titulo, String texto ){
 
-    }
-
-    public void modificarPublicacion(Cartelera unaCartelera, Publicacion unaPublicacion, String nuevoTexto){
-
-    }
-
-    public void eliminarPublicacion(Cartelera unaCartelera, Publicacion unaPublicacion){
-
-    }
 }

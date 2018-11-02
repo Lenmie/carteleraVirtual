@@ -63,4 +63,10 @@ public class Usuario {
 
     public void setPerfil(Perfil perfil) { this.perfil = perfil; }
 
+    public Usuario(String email, String password, String nombreCompleto, Perfil perfil) {
+        this.email = email;
+        this.password = password;
+        this.nombreCompleto = nombreCompleto;
+        this.perfil = perfil;
+    }
 }

@@ -10,6 +10,17 @@ public class Alumno extends Perfil{
     @OneToMany(mappedBy = "alumno")
     private List<Cartelera> cartelerasSelectas;
 
+    @Column(name="MEDIOS")
+    private List<String> mediosComunicacion;
+
+    public List<String> getMediosComunicacion() {
+        return mediosComunicacion;
+    }
+
+    public void setMediosComunicacion(List<String> mediosComunicacion) {
+        this.mediosComunicacion = mediosComunicacion;
+    }
+
     public Alumno(List<Cartelera> cartelerasSelectas) {
         this.cartelerasSelectas = cartelerasSelectas;
     }
@@ -18,7 +29,8 @@ public class Alumno extends Perfil{
         return cartelerasSelectas;
     }
 
-    public void setCartelerasSelectas(List<Cartelera> cartelerasSelectas) {
+    public Alumno(List<Cartelera> cartelerasSelectas, List<String> mediosComunicacion) {
         this.cartelerasSelectas = cartelerasSelectas;
+        this.mediosComunicacion = mediosComunicacion;
     }
 }

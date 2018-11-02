@@ -6,12 +6,4 @@ import javax.persistence.*;
 @Table
 public class Publicador extends Perfil{
 
-    @Id @GeneratedValue
-    @Column
-    private Long id;
-
-    public void publicar(Cartelera unaCartelera){
-
-    }
-
 }
