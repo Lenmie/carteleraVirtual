@@ -21,7 +21,7 @@ public class Publicacion {
     @Column
     private String texto;
 
-    @OneToMany(mappedBy = "") /* una publicacion tiene 0..* comentarios */
+    @OneToMany /* una publicacion tiene 0..* comentarios */
     private List<Comentario> comentarios;
 
     public Long getId() { return id; }
