@@ -10,4 +10,10 @@ public class CarteleraDAO extends GenericDAOHibernateJPA<Cartelera>{
         cartelera.agregarPublicacion(publicacion);
         actualizar(cartelera);
     }
+
+    public void eliminarPublicacion(Publicacion publicacion, Long idCartelera){
+        Cartelera cartelera = recuperar(idCartelera);
+        cartelera.eliminarPublicacion(publicacion);
+        actualizar(cartelera);
+    }
 }

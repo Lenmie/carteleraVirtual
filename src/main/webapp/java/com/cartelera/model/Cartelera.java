@@ -24,19 +24,44 @@ public class Cartelera {
     @OneToMany(mappedBy = "cartelera")
     private List<Alumno> alumnosInteresados;
 
-    public Cartelera nuevaConTituloYDescripcion(String titulo, String descripcion){
+    @OneToMany
+    private List<Publicacion> publicaciones;
 
-        return null;
+    @OneToMany
+    private List<Publicador> publicadores;
+
+    public List<Publicador> getPublicadores() {
+        return publicadores;
     }
 
+    public void setPublicadores(List<Publicador> publicadores) {
+        this.publicadores = publicadores;
+    }
+
+    public List<Publicacion> getPublicaciones() {
+        return publicaciones;
+    }
+
+    public void setPublicaciones(List<Publicacion> publicaciones) {
+        this.publicaciones = publicaciones;
+    }
+
+
     public void agregarPublicador(Perfil unPublicador){
+        this.publicadores.add((Publicador)unPublicador);
+
+    }
+
+    public void eliminarPublicador(Perfil unPublicador){
+        this.publicadores.remove(unPublicador);
 
     }
     public void agregarPublicacion(Publicacion unaPublicacion){
+        this.publicaciones.add(unaPublicacion);
 
     }
     public void eliminarPublicacion(Publicacion unaPublicacion){
-
+        this.publicaciones.remove(unaPublicacion);
     }
 
     public Long getId() { return id; }
@@ -74,10 +99,27 @@ public class Cartelera {
         this.alumnosInteresados = alumnosInteresados;
     }
 
+    public void addAlumnoInteresado(Alumno alumno){
+        this.alumnosInteresados.add(alumno);
+    }
+
+    public void removeAlumnoInteresado(Alumno alumno){
+        this.alumnosInteresados.remove(alumno);
+    }
+
     public Cartelera(String titulo, String descripcion, Date fechaCreacion, List<Alumno> alumnosInteresados) {
         this.titulo = titulo;
         this.descripcion = descripcion;
         this.fechaCreacion = fechaCreacion;
         this.alumnosInteresados = alumnosInteresados;
     }
+
+    public Cartelera(String titulo, String descripcion){
+        this.titulo = titulo;
+        this.descripcion = descripcion;
+    }
+
+    public Cartelera(){}
+
+
 }
