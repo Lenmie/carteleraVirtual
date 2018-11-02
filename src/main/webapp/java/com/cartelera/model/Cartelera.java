@@ -1,6 +1,7 @@
 package com.cartelera.model;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -70,19 +71,19 @@ public class Cartelera {
         return alumnosInteresados;
     }
 
-    public Cartelera(String titulo, String descripcion, Date fechaCreacion, List<Alumno> alumnosInteresados) {
-        this.titulo = titulo;
-        this.descripcion = descripcion;
-        this.fechaCreacion = fechaCreacion;
-        this.alumnosInteresados = alumnosInteresados;
-    }
-
     public Cartelera(String titulo, String descripcion){
+        this.publicaciones = new ArrayList<Publicacion>();
+        this.publicadores = new ArrayList<Publicador>();
+        this.alumnosInteresados = new ArrayList<Alumno>();
         this.titulo = titulo;
         this.descripcion = descripcion;
     }
 
-    public Cartelera(){}
+    public Cartelera(){
+        this.publicaciones = new ArrayList<Publicacion>();
+        this.publicadores = new ArrayList<Publicador>();
+        this.alumnosInteresados = new ArrayList<Alumno>();
+    }
 
 
 }

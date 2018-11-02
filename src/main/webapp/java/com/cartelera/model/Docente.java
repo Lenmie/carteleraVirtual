@@ -23,5 +23,7 @@ public class Docente extends Perfil {
         return new ArrayList<Alumno>();
     }
 
+    public Docente(){this.cartelerasHabilitadas = new ArrayList<Cartelera>();}
+
 
 }
