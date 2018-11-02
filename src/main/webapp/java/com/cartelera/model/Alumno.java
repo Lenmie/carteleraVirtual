@@ -10,13 +10,6 @@ public class Alumno extends Perfil{
     @OneToMany(mappedBy = "alumno")
     private List<Cartelera> cartelerasSelectas;
 
-
-    public void registrarInteres(Cartelera unaCartelera){
-
-    }
-    public void comentar(Cartelera unaCartelera,String texto){
-
-    }
     public Alumno(List<Cartelera> cartelerasSelectas) {
         this.cartelerasSelectas = cartelerasSelectas;
     }
