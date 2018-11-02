@@ -8,13 +8,13 @@ public class PublicacionDAO extends GenericDAOHibernateJPA<Publicacion> {
 
     public void insertarComentario(Comentario comentario, Long idPublicacion){
         Publicacion publicacion = recuperar(idPublicacion);
-        publicacion.addComentario(comentario);
+        publicacion.getComentarios().add(comentario);
         actualizar(publicacion);
     }
 
     public void eliminarComentario(Comentario comentario, Long idPublicacion){
         Publicacion publicacion = recuperar(idPublicacion);
-        publicacion.removeComentario(comentario);
+        publicacion.getComentarios().remove(comentario);
         actualizar(publicacion);
     }
 }
