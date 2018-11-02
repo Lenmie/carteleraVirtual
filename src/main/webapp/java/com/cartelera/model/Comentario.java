@@ -11,8 +11,8 @@ public class Comentario {
     @Column
     private Long id;
 
-    @Column
-    private Perfil creador;
+    @OneToOne(optional = false)
+    private Usuario creador;
 
     @Column
     private Date fechaCreacion;

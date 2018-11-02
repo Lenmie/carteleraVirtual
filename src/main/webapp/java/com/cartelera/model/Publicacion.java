@@ -20,6 +20,9 @@ public class Publicacion {
     @Column
     private String texto;
 
+    @OneToMany(optional = true) /* una publicacion tiene 0..* comentarios */
+    private List<Comentario> comentarios;
+
     public Long getId() { return id; }
 
     public void setId(Long id) { this.id = id; }
@@ -46,5 +49,15 @@ public class Publicacion {
 
     public void setTexto(String texto) {
         this.texto = texto;
+    }
+
+    public List<Comentario> getComentarios(){return this.comentarios}
+
+    public void addComentario(Comentario comment){
+        this.comentarios.add(comment);
+    }
+
+    public void removeComentario(Comentario comment){
+        this.comentarios.remove(comment);
     }
 }
