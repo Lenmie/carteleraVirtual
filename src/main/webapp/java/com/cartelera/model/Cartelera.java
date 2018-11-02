@@ -34,17 +34,11 @@ public class Cartelera {
         return publicadores;
     }
 
-    public void setPublicadores(List<Publicador> publicadores) {
-        this.publicadores = publicadores;
-    }
 
     public List<Publicacion> getPublicaciones() {
         return publicaciones;
     }
 
-    public void setPublicaciones(List<Publicacion> publicaciones) {
-        this.publicaciones = publicaciones;
-    }
 
 
     public void agregarPublicador(Perfil unPublicador){
@@ -94,9 +88,6 @@ public class Cartelera {
 
     public List<Alumno> getAlumnosInteresados() {
         return alumnosInteresados;
-    }
-    public void setAlumnosInteresados(List<Alumno> alumnosInteresados) {
-        this.alumnosInteresados = alumnosInteresados;
     }
 
     public void addAlumnoInteresado(Alumno alumno){
