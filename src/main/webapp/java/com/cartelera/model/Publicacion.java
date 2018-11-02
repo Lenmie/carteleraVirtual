@@ -1,6 +1,7 @@
 package com.cartelera.model;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -54,13 +55,12 @@ public class Publicacion {
 
     public List<Comentario> getComentarios(){return this.comentarios;}
 
-    public void addComentario(Comentario comment){
-        this.comentarios.add(comment);
+    public Publicacion(){this.comentarios = new ArrayList<Comentario>();}
+
+    public Publicacion(String titulo, String texto, Date fecha){
+        this.comentarios = new ArrayList<Comentario>();
+        this.titulo = titulo;
+        this.texto = texto;
+        this.fechaCreacion = fecha;
     }
-
-    public void removeComentario(Comentario comment){
-        this.comentarios.remove(comment);
-    }
-
-
 }

@@ -4,4 +4,5 @@ import com.cartelera.model.Usuario;
 
 public class UsuarioDAO extends GenericDAOHibernateJPA<Usuario> {
 
+
 }

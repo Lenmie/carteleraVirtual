@@ -1,6 +1,7 @@
 package com.cartelera.model;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -33,4 +34,6 @@ public class Alumno extends Perfil{
         this.cartelerasSelectas = cartelerasSelectas;
         this.mediosComunicacion = mediosComunicacion;
     }
+
+    public Alumno(){this.cartelerasSelectas = new ArrayList<Cartelera>();}
 }

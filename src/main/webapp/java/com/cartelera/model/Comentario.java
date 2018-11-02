@@ -68,4 +68,6 @@ public class Comentario {
         this.fechaCreacion = fechaCreacion;
         this.texto = texto;
     }
+
+    public Comentario(){}
 }
