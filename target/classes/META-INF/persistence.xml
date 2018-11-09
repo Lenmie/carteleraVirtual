@@ -6,17 +6,16 @@
 
     <persistence-unit name="aplicacion">
 
-        <class>com.cartelera.model.Cartelera</class>
-
+        <class>com.cartelera.model.UsuarioPerfil</class>
+        <class>com.cartelera.model.Administrador</class>
 
         <properties>
             <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
-            <property name="javax.persistence.jdbc.url" value="http://ttps.linti.unlp.edu.ar/phpmyadmin" />
-            <property name="javax.persistence.jdbc.user" value="usr_sala_bd3" />
-            <property name="javax.persistence.jdbc.password" value="pwd_sala_bd3" />
-            <property name="hibernate.default_schema" value="ttps_sala_bd3" />
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://mysql.java.linti.unlp.edu.ar/ttps_sala_bd4" />
+            <property name="javax.persistence.jdbc.user" value="usr_sala_bd4" />
+            <property name="javax.persistence.jdbc.password" value="pwd_sala_bd4" />
             <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect" />
-            <property name="hibernate.hbm2ddl.auto" value="create-drop" />
+            <property name="hibernate.hbm2ddl.auto" value="create" />
         </properties>
     </persistence-unit>
 

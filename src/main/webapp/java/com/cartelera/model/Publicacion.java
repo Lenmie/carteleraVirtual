@@ -10,19 +10,19 @@ import java.util.List;
 public class Publicacion {
 
     @Id @GeneratedValue
-    @Column(name = "PUBLICACION_ID")
+    @Column
     private Long id;
 
-    @Column(name = "FECHA_CREACION")
+    @Column
     private Date fechaCreacion;
 
-    @Column(name = "TITULO")
+    @Column
     private String titulo;
 
-    @Column(name = "TEXTO")
+    @Column
     private String texto;
 
-    @OneToMany(mappedBy = "publicacion") /* una publicacion tiene 0..* comentarios */
+    @OneToMany//(mappedBy = "publicacion") /* una publicacion tiene 0..* comentarios */
     private List<Comentario> comentarios;
 
     public Long getId() { return id; }

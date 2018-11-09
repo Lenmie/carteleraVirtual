@@ -6,12 +6,12 @@ import java.util.List;
 
 @Entity
 @Table
-public class Alumno extends Perfil{
+public class Alumno extends UsuarioPerfil{
 
-    @OneToMany(mappedBy = "alumno")
+    @OneToMany
     private List<Cartelera> cartelerasSelectas;
 
-    @Column(name="MEDIOS")
+    @ElementCollection
     private List<String> mediosComunicacion;
 
     public List<String> getMediosComunicacion() {
@@ -30,10 +30,13 @@ public class Alumno extends Perfil{
         return cartelerasSelectas;
     }
 
-    public Alumno(List<Cartelera> cartelerasSelectas, List<String> mediosComunicacion) {
+    public Alumno(String email, String password, String nombreCompleto, List<Cartelera> cartelerasSelectas, List<String> mediosComunicacion) {
+        super(email, password, nombreCompleto);
         this.cartelerasSelectas = cartelerasSelectas;
         this.mediosComunicacion = mediosComunicacion;
     }
 
-    public Alumno(){this.cartelerasSelectas = new ArrayList<Cartelera>();}
+    public Alumno(){
+
+    }
 }

@@ -1,21 +1,17 @@
 package com.cartelera;
 
 
-import com.cartelera.dao.UsuarioDAO;
+import com.cartelera.dao.hibernate.UsuarioHIbernateJPA;
 import com.cartelera.model.Administrador;
-import com.cartelera.model.Alumno;
-import com.cartelera.model.Perfil;
-import com.cartelera.model.Usuario;
+import com.cartelera.model.UsuarioPerfil;
 
 public class Main {
 
     public static void main(final String[] args) throws Exception {
-        Perfil admin = new Administrador();
-        Usuario usuario = new Usuario("enci.javier@yahoo.com","1234","javier surita",admin);
+        UsuarioPerfil admin = new Administrador("admin@gmail.com","1234","don admin");
 
-        UsuarioDAO usuarioDAO = new UsuarioDAO();
-        usuarioDAO.persistir(usuario);
-
-
+        UsuarioHIbernateJPA usuarioDao = new UsuarioHIbernateJPA();
+        usuarioDao.persistir(admin);
+        System.out.println(usuarioDao.recuperar(1));
     }
 }

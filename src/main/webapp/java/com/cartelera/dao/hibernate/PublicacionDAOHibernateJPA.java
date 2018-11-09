@@ -1,10 +1,15 @@
-package com.cartelera.dao;
+package com.cartelera.dao.hibernate;
 
-import com.cartelera.model.Cartelera;
+import com.cartelera.dao.interfaces.PublicacionDAO;
 import com.cartelera.model.Comentario;
 import com.cartelera.model.Publicacion;
 
-public class PublicacionDAO extends GenericDAOHibernateJPA<Publicacion> {
+public class PublicacionDAOHibernateJPA extends GenericDAOHibernateJPA<Publicacion> implements PublicacionDAO {
+
+    public PublicacionDAOHibernateJPA(){
+        super(Publicacion.class);
+    }
+
 
     public void insertarComentario(Comentario comentario, Long idPublicacion){
         Publicacion publicacion = recuperar(idPublicacion);

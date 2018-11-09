@@ -1,10 +1,10 @@
-package com.cartelera.dao;
+package com.cartelera.dao.hibernate;
+
+import com.cartelera.dao.interfaces.GenericDAO;
 
 import javax.persistence.EntityManager;
 import java.io.Serializable;
 import java.util.List;
-import java.util.Queue;
-import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Query;
 
@@ -104,5 +104,9 @@ public class GenericDAOHibernateJPA<T> implements GenericDAO<T> {
                 "select e from" + getPersistentClass().getSimpleName()+"e order by e."+columnOrder);
         List<T> resultado = (List<T>)consulta.getResultList();
         return resultado;
+    }
+
+    public GenericDAOHibernateJPA(Class<T> persistentClass) {
+        this.persistentClass = persistentClass;
     }
 }

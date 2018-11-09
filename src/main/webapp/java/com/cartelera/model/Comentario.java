@@ -2,39 +2,38 @@ package com.cartelera.model;
 
 import javax.persistence.*;
 import java.util.Date;
-import java.util.NavigableMap;
 
 @Entity
 @Table
 public class Comentario {
 
     @Id @GeneratedValue
-    @Column(name = "COMENTARIO_ID")
+    @Column
     private Long id;
 
     @OneToOne(optional = false)
-    @Column(name = "CREADOR")
-    private Usuario creador;
+    @Column
+    private UsuarioPerfil creador;
 
     @OneToOne
-    @Column(name = "PUBLICACION")
+    @Column
     private Publicacion publicacion;
 
-    @Column(name = "FECHA_CREACION")
+    @Column
     private Date fechaCreacion;
 
-    @Column(name = "TEXTO")
+    @Column
     private String texto;
 
     public Long getId() { return id; }
 
     public void setId(Long id) { this.id = id; }
 
-    public Usuario getCreador() {
+    public UsuarioPerfil getCreador() {
         return creador;
     }
 
-    public void setCreador(Usuario creador) {
+    public void setCreador(UsuarioPerfil creador) {
         this.creador = creador;
     }
 
@@ -62,7 +61,7 @@ public class Comentario {
         this.publicacion = publicacion;
     }
 
-    public Comentario(Usuario creador, Publicacion publicacion, Date fechaCreacion, String texto) {
+    public Comentario(UsuarioPerfil creador, Publicacion publicacion, Date fechaCreacion, String texto) {
         this.creador = creador;
         this.publicacion = publicacion;
         this.fechaCreacion = fechaCreacion;

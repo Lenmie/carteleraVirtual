@@ -1,4 +1,4 @@
-package com.cartelera.dao;
+package com.cartelera.dao.interfaces;
 
 import java.io.Serializable;
 

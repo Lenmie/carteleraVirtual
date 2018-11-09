@@ -1,4 +1,4 @@
-package com.cartelera.dao;
+package com.cartelera.dao.hibernate;
 
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
