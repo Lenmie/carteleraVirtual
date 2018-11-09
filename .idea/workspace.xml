@@ -6,57 +6,13 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="941e2d8c-8624-46a0-9610-f3f3ec2ac46c" name="Default" comment="rehecho con el nuevo modelo, falta testeo">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/java/com/cartelera/dao/hibernate/CarteleraDAOHibernateJPA.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/java/com/cartelera/dao/hibernate/UsuarioHIbernateJPA.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/java/com/cartelera/dao/interfaces/CarteleraDAO.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/java/com/cartelera/dao/interfaces/ComentarioDAO.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/java/com/cartelera/dao/interfaces/PublicacionDAO.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/java/com/cartelera/dao/interfaces/UsuarioPerfilDAO.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/java/com/cartelera/dao/AdministradorDAO.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/java/com/cartelera/dao/AlumnoDAO.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/java/com/cartelera/dao/CarteleraDAO.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/java/com/cartelera/dao/ComentarioDAO.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/java/com/cartelera/dao/ComentarioHibernateJPA.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/java/com/cartelera/dao/DocenteDAO.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/java/com/cartelera/dao/UsuarioDAO.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/java/com/cartelera/dao/UsuarioHIbernateJPA.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/java/com/cartelera/model/Perfil.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/cartelera/Main.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/cartelera/dao/AdministradorDAO.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/cartelera/dao/AlumnoDAO.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/cartelera/dao/CarteleraDAO.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/cartelera/dao/ComentarioDAO.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/cartelera/dao/DocenteDAO.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/cartelera/dao/GenericDAOHibernateJPA.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/cartelera/dao/PublicacionDAO.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/cartelera/dao/PublicadorDAO.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/cartelera/dao/UsuarioDAO.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/cartelera/model/Usuario.class" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/java/com/cartelera/dao/EMF.java" afterPath="$PROJECT_DIR$/src/main/webapp/java/com/cartelera/dao/hibernate/EMF.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/java/com/cartelera/dao/GenericDAO.java" afterPath="$PROJECT_DIR$/src/main/webapp/java/com/cartelera/dao/interfaces/GenericDAO.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/java/com/cartelera/dao/GenericDAOHibernateJPA.java" afterPath="$PROJECT_DIR$/src/main/webapp/java/com/cartelera/dao/hibernate/GenericDAOHibernateJPA.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/java/com/cartelera/dao/PublicacionDAO.java" afterPath="$PROJECT_DIR$/src/main/webapp/java/com/cartelera/dao/hibernate/PublicacionDAOHibernateJPA.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/java/com/cartelera/dao/PublicadorDAO.java" afterPath="$PROJECT_DIR$/src/main/webapp/java/com/cartelera/dao/hibernate/ComentarioDAOHibernateJPA.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/java/com/cartelera/model/Usuario.java" afterPath="$PROJECT_DIR$/src/main/webapp/java/com/cartelera/model/UsuarioPerfil.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cartelera/model/Alumno.class" afterPath="$PROJECT_DIR$/target/classes/com/cartelera/model/Alumno.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cartelera/model/Cartelera.class" afterPath="$PROJECT_DIR$/target/classes/com/cartelera/model/Cartelera.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cartelera/model/Comentario.class" afterPath="$PROJECT_DIR$/target/classes/com/cartelera/model/Comentario.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cartelera/model/Docente.class" afterPath="$PROJECT_DIR$/target/classes/com/cartelera/model/Docente.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cartelera/model/Publicacion.class" afterPath="$PROJECT_DIR$/target/classes/com/cartelera/model/Publicacion.class" />
+    <list default="true" id="941e2d8c-8624-46a0-9610-f3f3ec2ac46c" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/cartelera/dao/EMF.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/cartelera/dao/GenericDAO.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/cartelera/model/Perfil.class" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cartelera/model/Administrador.class" afterPath="$PROJECT_DIR$/target/classes/com/cartelera/model/Administrador.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cartelera/model/Publicador.class" afterPath="$PROJECT_DIR$/target/classes/com/cartelera/model/Publicador.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/carteleraVirtual.iml" afterPath="$PROJECT_DIR$/carteleraVirtual.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/readme.txt" afterPath="$PROJECT_DIR$/readme.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/java/META-INF/persistence.xml" afterPath="$PROJECT_DIR$/src/main/webapp/java/META-INF/persistence.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/java/com/cartelera/Main.java" afterPath="$PROJECT_DIR$/src/main/webapp/java/com/cartelera/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/java/com/cartelera/model/Administrador.java" afterPath="$PROJECT_DIR$/src/main/webapp/java/com/cartelera/model/Administrador.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/java/com/cartelera/model/Alumno.java" afterPath="$PROJECT_DIR$/src/main/webapp/java/com/cartelera/model/Alumno.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/java/com/cartelera/model/Comentario.java" afterPath="$PROJECT_DIR$/src/main/webapp/java/com/cartelera/model/Comentario.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/java/com/cartelera/model/Docente.java" afterPath="$PROJECT_DIR$/src/main/webapp/java/com/cartelera/model/Docente.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/java/com/cartelera/model/Publicacion.java" afterPath="$PROJECT_DIR$/src/main/webapp/java/com/cartelera/model/Publicacion.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/java/com/cartelera/model/Publicador.java" afterPath="$PROJECT_DIR$/src/main/webapp/java/com/cartelera/model/Publicador.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" afterPath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -105,7 +61,7 @@
       <file leaf-file-name="persistence.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/java/META-INF/persistence.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
+            <state relative-caret-position="116">
               <caret line="9" column="48" lean-forward="false" selection-start-line="9" selection-start-column="48" selection-end-line="9" selection-end-column="48" />
               <folding />
             </state>
@@ -576,12 +532,20 @@
       <workItem from="1541670959859" duration="1136000" />
       <workItem from="1541697418240" duration="648000" />
       <workItem from="1541780061986" duration="22000" />
-      <workItem from="1541783840378" duration="5909000" />
+      <workItem from="1541783840378" duration="6503000" />
     </task>
+    <task id="LOCAL-00001" summary="rehecho con el nuevo modelo, falta testeo">
+      <created>1541790566235</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1541790566235</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47679000" />
+    <option name="totallyTimeSpent" value="48273000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1366" height="749" extended-state="0" />
@@ -605,7 +569,7 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.41284403" sideWeight="0.4941263" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2798165" sideWeight="0.4941263" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32977098" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32011747" sideWeight="0.49126637" order="0" side_tool="false" content_ui="combo" />
@@ -995,7 +959,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/java/META-INF/persistence.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
+        <state relative-caret-position="116">
           <caret line="9" column="48" lean-forward="false" selection-start-line="9" selection-start-column="48" selection-end-line="9" selection-end-column="48" />
           <folding />
         </state>
