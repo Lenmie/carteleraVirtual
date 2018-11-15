@@ -1,2 +1,3 @@
-no llegamos con el tiempo, nos trabamos y nos costo entender el tema de herencia de las clases genericas dao, ademas que el modelo no era el apropiado para esta implementacion y nos tomo tiempo darnos cuenta de esto
-como se ve en persistence.xml nos conectamos a la base de datos phpmyadmin de la catedra, solo hay q correr el main
+nunca notificaron que se iba a reabrir la renetrega. hoy me entere a 3 horas de finalizado el plazo. 
+Pude lograr hacer un persist comun, pero por algun motivo no me persiste una publicacion. 
+hice una database comun en localhost usando sql llamada pruebajava. con crear el esquema deberia funcionar
