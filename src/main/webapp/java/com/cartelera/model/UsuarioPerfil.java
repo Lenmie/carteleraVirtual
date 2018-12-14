@@ -1,22 +1,29 @@
 package com.cartelera.model;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
+@Inheritance
+@DiscriminatorColumn(name = "tipo_perfil")
+@Table(name = "usuario_perfil")
 public abstract class UsuarioPerfil {
 
     @Id @GeneratedValue
-    @Column
+    @Column(name = "usuario_id")
     private Long id;
 
-    @Column
+    @Column(name = "email")
     private String email;
 
-    @Column
+    @Column(name = "password")
     private String password;
 
-    @Column
+    @Column(name = "nombre_completo")
     private String nombreCompleto;
+
+    @ManyToMany(mappedBy = "publicadores")
+    private List<Cartelera> carteleras;
 
     public String getEmail() {
         return email;
@@ -42,13 +49,27 @@ public abstract class UsuarioPerfil {
         this.nombreCompleto = nombreCompleto;
     }
 
-    public UsuarioPerfil(){}
+    public Long getId() {
+        return id;
+    }
 
-    public UsuarioPerfil(String email, String password, String nombreCompleto){
+    public void setId(Long id) {
+        this.id = id;
+    }
 
+    public List<Cartelera> getCarteleras() {
+        return carteleras;
+    }
+
+    public void setCarteleras(List<Cartelera> carteleras) {
+        this.carteleras = carteleras;
+    }
+
+    public UsuarioPerfil(String email, String password, String nombreCompleto) {
         this.email = email;
         this.password = password;
         this.nombreCompleto = nombreCompleto;
     }
 
+    public UsuarioPerfil(){}
 }

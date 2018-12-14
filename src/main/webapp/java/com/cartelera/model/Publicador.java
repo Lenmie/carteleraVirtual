@@ -3,7 +3,7 @@ package com.cartelera.model;
 import javax.persistence.*;
 
 @Entity
-@Table
+@DiscriminatorValue("publicador")
 public class Publicador extends UsuarioPerfil{
 
     public Publicador() {
@@ -12,4 +12,5 @@ public class Publicador extends UsuarioPerfil{
     public Publicador(String email, String password, String nombreCompleto) {
         super(email, password, nombreCompleto);
     }
+
 }

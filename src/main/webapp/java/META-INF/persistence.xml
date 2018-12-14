@@ -8,12 +8,14 @@
 
         <class>com.cartelera.model.UsuarioPerfil</class>
         <class>com.cartelera.model.Administrador</class>
+        <class>com.cartelera.model.Publicacion</class>
+        <class>com.cartelera.model.Comentario</class>
 
         <properties>
             <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
-            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://mysql.java.linti.unlp.edu.ar/ttps_sala_bd4" />
-            <property name="javax.persistence.jdbc.user" value="usr_sala_bd4" />
-            <property name="javax.persistence.jdbc.password" value="pwd_sala_bd4" />
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/pruebajava" />
+            <property name="javax.persistence.jdbc.user" value="root" />
+            <property name="javax.persistence.jdbc.password" value="root" />
             <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect" />
             <property name="hibernate.hbm2ddl.auto" value="create" />
         </properties>

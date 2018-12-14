@@ -6,29 +6,38 @@ import java.util.Date;
 import java.util.List;
 
 @Entity
-@Table
+@Table(name = "cartelera")
 public class Cartelera {
 
     @Id @GeneratedValue
-    @Column
+    @Column(name = "cartelera_id")
     private Long id;
 
-    @Column
+    @Column(name = "titulo")
     private String titulo;
 
-    @Column
+    @Column(name = "descripcion")
     private String descripcion;
 
-    @Column
+    @Column(name = "fecha_creacion")
     private Date fechaCreacion;
 
-    @OneToMany(mappedBy = "cartelera")
+    @ManyToMany
+    @JoinTable(
+            name = "interesado_cartelera",
+            joinColumns = @JoinColumn(name = "cartelera_id", referencedColumnName = "cartelera_id"),
+            inverseJoinColumns = @JoinColumn(name = "usuario_id", referencedColumnName = "usuario_id"))
     private List<Alumno> alumnosInteresados;
 
-    @OneToMany
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+    @JoinColumn(name = "cartelera_id")
     private List<Publicacion> publicaciones;
 
-    @OneToMany
+    @ManyToMany(cascade = CascadeType.ALL)
+    @JoinTable(
+            name = "publicador_cartelera",
+            joinColumns = @JoinColumn(name = "cartelera_id", referencedColumnName = "cartelera_id"),
+            inverseJoinColumns = @JoinColumn(name = "usuario_id", referencedColumnName = "usuario_id"))
     private List<Publicador> publicadores;
 
     public List<Publicador> getPublicadores() {
@@ -84,6 +93,5 @@ public class Cartelera {
         this.publicadores = new ArrayList<Publicador>();
         this.alumnosInteresados = new ArrayList<Alumno>();
     }
-
 
 }

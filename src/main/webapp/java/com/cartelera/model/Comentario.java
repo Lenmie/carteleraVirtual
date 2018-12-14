@@ -4,38 +4,25 @@ import javax.persistence.*;
 import java.util.Date;
 
 @Entity
-@Table
+@Table(name = "comentario")
 public class Comentario {
 
     @Id @GeneratedValue
-    @Column
+    @Column(name = "comentario_id")
     private Long id;
 
-    @OneToOne(optional = false)
-    @Column
+    @ManyToOne(optional = false)
     private UsuarioPerfil creador;
 
-    @OneToOne
-    @Column
-    private Publicacion publicacion;
-
-    @Column
+    @Column(name = "fecha_creacion")
     private Date fechaCreacion;
 
-    @Column
+    @Column(name = "texto")
     private String texto;
 
     public Long getId() { return id; }
 
     public void setId(Long id) { this.id = id; }
-
-    public UsuarioPerfil getCreador() {
-        return creador;
-    }
-
-    public void setCreador(UsuarioPerfil creador) {
-        this.creador = creador;
-    }
 
     public Date getFechaCreacion() {
         return fechaCreacion;
@@ -53,17 +40,16 @@ public class Comentario {
         this.texto = texto;
     }
 
-    public Publicacion getPublicacion() {
-        return publicacion;
+    public UsuarioPerfil getCreador() {
+        return creador;
     }
 
-    public void setPublicacion(Publicacion publicacion) {
-        this.publicacion = publicacion;
-    }
-
-    public Comentario(UsuarioPerfil creador, Publicacion publicacion, Date fechaCreacion, String texto) {
+    public void setCreador(UsuarioPerfil creador) {
         this.creador = creador;
-        this.publicacion = publicacion;
+    }
+
+    public Comentario(UsuarioPerfil creador, Date fechaCreacion, String texto) {
+        this.creador = creador;
         this.fechaCreacion = fechaCreacion;
         this.texto = texto;
     }

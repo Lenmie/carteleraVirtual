@@ -3,7 +3,7 @@ package com.cartelera.model;
 import javax.persistence.*;
 
 @Entity
-@Table
+@DiscriminatorValue("administrador")
 public class Administrador extends UsuarioPerfil {
 
     public Administrador() {

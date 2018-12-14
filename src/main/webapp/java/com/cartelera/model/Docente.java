@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table
+@DiscriminatorValue("docente")
 public class Docente extends UsuarioPerfil {
 
     @OneToMany
@@ -27,13 +27,12 @@ public class Docente extends UsuarioPerfil {
         this.cartelerasHabilitadas = cartelerasHabilitadas;
     }
 
-    public Docente() {
-    }
-
-    public Docente(String email, String password, String nombreCompleto, List<Cartelera> cartelerasHabilitadas) {
+    public Docente(String email, String password, String nombreCompleto, long carteleraId, List<Cartelera> cartelerasHabilitadas) {
         super(email, password, nombreCompleto);
         this.cartelerasHabilitadas = cartelerasHabilitadas;
     }
 
+    public Docente() {
+    }
 
 }

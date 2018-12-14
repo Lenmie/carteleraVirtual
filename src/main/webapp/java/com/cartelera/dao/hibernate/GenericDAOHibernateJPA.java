@@ -25,7 +25,8 @@ public class GenericDAOHibernateJPA<T> implements GenericDAO<T> {
         EntityManager em = EMF.getEMF().createEntityManager();
         EntityTransaction etx = em.getTransaction();
         etx.begin();
-        //T entity = em.merge(entity);
+        entity = em.merge(entity);
+        em.flush();
         etx.commit();
         em.close();
         return entity;

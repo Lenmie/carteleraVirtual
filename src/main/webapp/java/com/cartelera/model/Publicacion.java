@@ -6,23 +6,24 @@ import java.util.Date;
 import java.util.List;
 
 @Entity
-@Table
+@Table(name = "publicacion")
 public class Publicacion {
 
     @Id @GeneratedValue
-    @Column
+    @Column(name = "publicacion_id")
     private Long id;
 
-    @Column
+    @Column(name = "fecha_creacion")
     private Date fechaCreacion;
 
-    @Column
+    @Column(name = "titulo")
     private String titulo;
 
-    @Column
+    @Column(name = "texto")
     private String texto;
 
-    @OneToMany//(mappedBy = "publicacion") /* una publicacion tiene 0..* comentarios */
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+    @JoinColumn(name = "publicacion_id")
     private List<Comentario> comentarios;
 
     public Long getId() { return id; }
@@ -55,12 +56,16 @@ public class Publicacion {
 
     public List<Comentario> getComentarios(){return this.comentarios;}
 
-    public Publicacion(){this.comentarios = new ArrayList<Comentario>();}
+    public void setComentarios(List<Comentario> comentarios) { this.comentarios = comentarios; }
 
-    public Publicacion(String titulo, String texto, Date fecha){
+    public Publicacion(){
+
+    }
+
+    public Publicacion(Date fechaCreacion, String titulo, String texto) {
         this.comentarios = new ArrayList<Comentario>();
+        this.fechaCreacion = fechaCreacion;
         this.titulo = titulo;
         this.texto = texto;
-        this.fechaCreacion = fecha;
     }
 }

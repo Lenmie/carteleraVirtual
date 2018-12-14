@@ -5,10 +5,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table
+@DiscriminatorValue("alumno")
 public class Alumno extends UsuarioPerfil{
 
-    @OneToMany
+    @ManyToMany(mappedBy = "alumnosInteresados")
     private List<Cartelera> cartelerasSelectas;
 
     @ElementCollection
@@ -30,13 +30,15 @@ public class Alumno extends UsuarioPerfil{
         return cartelerasSelectas;
     }
 
-    public Alumno(String email, String password, String nombreCompleto, List<Cartelera> cartelerasSelectas, List<String> mediosComunicacion) {
+    public Alumno() {
+        this.cartelerasSelectas = new ArrayList<Cartelera>();
+        this.mediosComunicacion = new ArrayList<String>();
+    }
+
+    public Alumno(String email, String password, String nombreCompleto) {
         super(email, password, nombreCompleto);
-        this.cartelerasSelectas = cartelerasSelectas;
-        this.mediosComunicacion = mediosComunicacion;
+        this.cartelerasSelectas = new ArrayList<Cartelera>();
+        this.mediosComunicacion = new ArrayList<String>();
     }
 
-    public Alumno(){
-
-    }
 }
